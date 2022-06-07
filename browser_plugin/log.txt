@@ -1,0 +1,2 @@
+The background script should be viewed as "running in the background of the Chrome browser".
+Your desired effect (running a script for every page) is actually a task for content scripts.

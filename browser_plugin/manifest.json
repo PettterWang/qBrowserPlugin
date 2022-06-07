@@ -1,0 +1,38 @@
+{
+    "name": "千秋助手",
+    "description": "适用于Chromium系浏览器的插件助手.",
+    "version": "1.0",
+    "manifest_version": 3,
+
+    "background": {
+      "service_worker": "/background/background.js"
+    },
+
+    "permissions": ["storage", "activeTab", "scripting","contextMenus","tabs"],
+
+    "action": {
+        "default_popup": "/popup/popup.html",
+        "default_title": "千秋助手",
+        "default_icon": {
+            "16": "/img/logo.png",
+            "32": "/img/logo.png",
+            "48": "/img/logo.png",
+            "128": "/img/logo.png"
+          }
+    },
+
+    "icons": {
+        "16": "/img/logo.png",
+        "32": "/img/logo.png",
+        "48": "/img/logo.png",
+        "128": "/img/logo.png"
+    },
+
+    "content_scripts": [
+      {
+        "matches": ["http://*/*","https://*/*"],
+        "css": ["/css/styles.css"],
+        "js": ["/jq/jquery-3.6.0.min.js","/js/content.js"]
+      }
+    ]
+}
